@@ -1,6 +1,7 @@
 def containsDuplicate(nums):
     nums.sort() 
-    for i in range(1, len(nums)): 
+    size = len(nums)
+    for i in range(1, size): 
         if nums[i] == nums[i-1]: 
             return True 
     

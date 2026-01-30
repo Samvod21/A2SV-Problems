@@ -1,11 +1,13 @@
 def containsDuplicate(nums):
-    nums.sort() 
-    size = len(nums)
-    for i in range(1, size): 
-        if nums[i] == nums[i-1]: 
-            return True 
-    
-    return False
+    uni = set()
+
+    for i in nums:
+        uni.add(i)
+        
+    if len(nums) == len(uni):
+        return False
+    else:
+        return True
 
 nums = [1, 2, 3, 4]
 res = containsDuplicate(nums)

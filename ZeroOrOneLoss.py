@@ -21,3 +21,4 @@ class Solution(object):
         ones.sort()
 
         return [zeros, ones]
+# 3 28

@@ -1,0 +1,16 @@
+class Solution(object):
+    def rotate(self, matrix):
+        n = len(matrix)
+        ans = []
+
+        for j in range(n):
+            check = []
+
+            for i in range(n - 1, -1, -1):
+                check.append(matrix[i][j])
+            
+            ans.append(check)
+            
+        for i in range(n):
+            for j in range(n):
+                matrix[i][j] = ans[i][j]

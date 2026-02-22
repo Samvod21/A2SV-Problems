@@ -21,8 +21,8 @@ for i in range(nt):
             if arr[i] != 1:
                 res.append(1)
                 break
-        else:
-            res.append(2)
+            else:
+                res.append(2)
 
 for i in res:
     print(i)

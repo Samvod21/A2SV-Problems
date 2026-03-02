@@ -14,7 +14,7 @@ for i in range(k):
                 for j in range(n):
                     if arr[j] != 0:
                         arr[j] = arr[j] - i
-                break
+            
     
     else:
         ans.append(minimum)

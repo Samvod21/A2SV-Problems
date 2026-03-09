@@ -1,19 +1,22 @@
-n = int(input())
+t = int(input())
+ind = set()
 ans = []
 
-for i in range(n):
-    size = int(input())
-    arr = input()
-    string = list(arr)
-    c = 0
-    
-    for i in range(size - 1):
-        if string[i] == 'A' and string[i + 1] == 'B':
-            string[i], string[i + 1] = string[i + 1], string[i]
-            c += 1
-            i = 0
+for _ in range(t):
+    n = int(input())
+    stri = list(input().strip())
 
-    ans.append(c)
+    for i in range(n - 1):
+        if stri[i] == 'A' and stri[i + 1] == 'B':
+            ind.add(i)
+            stri[i], stri[i + 1] = stri[i + 1], stri[i]
+            i = 0
+    
+    ans.append(len(ind))
 
 for i in ans:
     print(i)
+        
+    
+   
+    

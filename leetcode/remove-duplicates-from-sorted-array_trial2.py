@@ -9,4 +9,3 @@ class Solution(object):
                 nums[c] = nums[i]
         
         return c + 1
-        

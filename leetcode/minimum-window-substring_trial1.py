@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution(object):
     def minWindow(self, s, t):
         tfre = Counter(t)

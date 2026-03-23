@@ -1,23 +1,16 @@
 n, t = map(int, input().split())
 arr = list(map(int, input().split()))
-arr.sort()
-
-c = 0
 s = 0
+c = 0
 l = 0
-r = n - 1
 
-while l <= r:
-    s += arr[l]
-
-    if s < t:
-        c += 1
-        l += 1
-    
+for r in range(n):
     s += arr[r]
 
-    if s < t:
-        c += 1
-        r -= 1
+    while s > t:
+        s -= arr[l]
+        l += 1
+    
+    c = max(c, r - l + 1)
 
 print(c)

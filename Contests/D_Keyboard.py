@@ -8,7 +8,8 @@ for i in range(t):
     l = 0
     r = 1
 
-    while l < r
+    while l < r:
+        
 
     
             

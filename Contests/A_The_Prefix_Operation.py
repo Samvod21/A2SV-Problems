@@ -1,30 +1,29 @@
 t = int(input())
-n, k = map(int, input().split())
-s = input()
-ans = []
 
 for _ in range(t):
-    if s.count('B') == k:
-        ans.append(0)
-    
-    else:
-        if s.count('B') < k:
-            if k == n:
-                ans.append(1)
-                ans.append([n, 'A'])
-            else:
-                ans.append(2)
-                ans.append([n, 'A'], [k, 'B'])
-        else:
-            if k == 0:
-                ans.append(1)
-                ans.append([n, 'A'])
-            else:
-                ans.append(2)
-                ans.append([n, 'B'], [n - k, 'A'])
+    n, k = map(int,input().split())
+    s = list(input())
+    c = s.count('B')
 
-for a in ans:
-    print(a)
-            
+    if c == k:
+        print(0)
+        continue
     
+    for i in range(1, n + 1):
+        temp = s[:]
+        temp[:i] = ['A'] * i
+
+        if temp.count('B') == k:
+            print(1)
+            print(i, 'A')
+            break   
+
+        temp = s[:]
+        temp[:i] = ['B'] * i
+
+        if temp.count('B') == k:
+            print(1)
+            print(i, 'B')
+            break
+
         

@@ -9,8 +9,3 @@ class Solution(object):
         
         helper(0, len(s) - 1)
         return s
-        
-        
-        
-
-        

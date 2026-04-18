@@ -1,13 +1,16 @@
 class Solution(object):
     def reverseString(self, s):
-        size = len(s)
-        f = 0
-        l = size - 1
-
-        while f < l:
-            s[f], s[l] = s[l], s[f]
-            f += 1
-            l -= 1
+        def helper(l, r):
+            if l >= r:
+                return
+        
+            s[l], s[r] = s[r], s[l]
+            helper(l + 1, r - 1)
+        
+        helper(0, len(s) - 1)
+        return s
+        
+        
         
 
         
